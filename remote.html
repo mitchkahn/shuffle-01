@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<style>	
+	 {
+		max-width: 300px;
+	}
+
+	
+	
+	img {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+	
+	#logo {
+		width: 250px;
+		float;
+		margin-left: auto;
+		margin-right: auto;
+		}
+	
+	button {
+		position: relative;
+		width: 90px;
+		height: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+		
+
+</style>
+ 
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+//    var redScore;
+//    var blueScore;
+    
+		$.ajax({	
+			type: "GET",
+			url: "/data/score.json",
+			dataType: "json",
+			success: function( score ) {
+				redScore = score.red;
+				blueScore = score.blue;
+				console.log(redScore, blueScore);
+			},
+			error: function() {
+				alert("An error occurred while processing Score file.");
+			}
+		}); 
+    
+
+		$("button#RedButton").click(function(){
+			redScore++;
+			$.post("scoreform.php",{color0: "red", score0: redScore, color1: "blue", score1: blueScore});
+			console.log(redScore, blueScore);
+		});
+		$("button#BlueButton").click(function(){
+			blueScore++;
+			$.post("scoreform.php",{color0: "red", score0: redScore, color1: "blue", score1: blueScore});
+			console.log(redScore, blueScore);
+		});
+		$("button#ResetButton").click(function(){
+			redScore = 0;
+			blueScore = 0;
+			$.post("scoreform.php",{color0: "red", score0: redScore, color1: "blue", score1: blueScore});
+		});
+	});
+</script>	
+
+
+</head>
+
+
+<body>
+
+
+
+
+<img id="logo" src="/images/OverPlayTVLogo.png" alt="What am I doing wrong?">
+
+
+</br>
+
+
+<button id="RedButton" tabindex=1 type="button" autofocus>Add Red Score</button>
+</br>
+<button id="BlueButton" tabindex=2 type="button">Add Blue Score</button>
+</br>
+<button id="ResetButton" tabindex=3 type="button">Reset Score</button>
+</br>
+
+</body>
+</html> 

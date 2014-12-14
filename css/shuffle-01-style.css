@@ -1,0 +1,46 @@
+	body {
+        xbackground: #F000F0
+        background: #232323;
+        font-family: "Droid Sans", "Helvetica Neue", "Nimbus Sans L", sans-serif;
+	}
+
+    h1 {
+		position: absolute;
+		right: 50px;
+	}
+
+	#logo {
+        margin-right: 60px;
+        float: right;
+        margin-top: 60px;
+        width: 250px;
+	}
+
+	#reddisplay {
+        position: absolute;
+        right: 16vw;
+        top: 43vh;
+        color: #ff5000;
+        font-size: 15vh;
+	}
+
+	#bluedisplay {
+        position: absolute;
+        right: 5vw;
+        top: 43vh;
+        color: #0095d4;
+        font-size: 15vh;
+	}
+
+	#error {
+	    position: absolute;
+	    top: 1vh;
+	    left: 1vw;
+	    color: #002a80;
+	    font-size: 2em;
+	}
+
+	button {
+		position: relative;
+		left: -0px;
+	}
