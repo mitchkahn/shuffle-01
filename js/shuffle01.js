@@ -17,6 +17,9 @@
 
           },
           error: function(error) {
+            //TODO would be a good idea to call scoreform.php here because this means
+            //there is no score.json file and the call to scoreform.json should create a
+            //default.
             $("#error").html("Error fetching score...");
             $("#reddisplay").html("---");
             $("#bluedisplay").html("---");
