@@ -20,7 +20,7 @@
         right: 200px;
         top: 320px;
         color: #ff5000;
-        font-size: 15vh;
+        font-size: 7em;
 	}
 
 	#bluedisplay {
@@ -28,7 +28,7 @@
         right: 60px;
         top: 320px;
         color: #0095d4;
-        font-size: 15vh;
+        font-size: 7em;
 	}
 
 	#error {
