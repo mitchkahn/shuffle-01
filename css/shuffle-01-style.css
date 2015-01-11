@@ -17,8 +17,8 @@
 
 	#reddisplay {
         position: absolute;
-        right: 16vw;
-        top: 43vh;
+        right: 60px;
+        top: 300px;
         color: #ff5000;
         font-size: 15vh;
 	}
